@@ -39,7 +39,7 @@ public class UserPrinciple implements UserDetails {
         userPrinciple.phoneNumber= user.getPhoneNumber();
         userPrinciple.email = user.getEmail();
         userPrinciple.password = user.getPassword();
-//        userPrinciple.authorities = Collections.singletonList(new SimpleGrantedAuthority(user.getRole().name()));
+        userPrinciple.authorities = Collections.singletonList(new SimpleGrantedAuthority(user.getEmail()));
 
         return userPrinciple;
     }
